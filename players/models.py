@@ -12,6 +12,7 @@ class Player(models.Model):
     name = models.CharField(max_length=50)
     age = models.IntegerField()
     rating = models.IntegerField()
-    team = models.ForeignKey(Category, on_delete=models.CASCADE)  def __str__(self):
+    team = models.ForeignKey(Team, on_delete=models.CASCADE)
     
-    return self.name +" - "+str(self.age)
+    def __str__(self):    
+        return self.name +" - "+str(self.age)
